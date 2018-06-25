@@ -253,11 +253,7 @@ int main()
 	});
 
 	int port = 4567;
-#ifdef UWS_VCPKG  
-	if (h.listen("127.0.0.1", port))
-#else
 	if (h.listen(port))
-#endif
 	{
 		std::cout << "Listening to port " << port << std::endl;
 	}
