@@ -25,8 +25,54 @@ See the starter code from Udacity Project
 - Docs - a directory with files formats description
 
 ## Results
-The below results are observed using the [Merceded Sensor Fusion Utilities](https://github.com/udacity/CarND-Mercedes-SF-Utilities)
+Using two sets of simulated runs, Extended Kalman Filter produces the below results. The x-position is shown as 'px', y-position as 'py', velocity in the x-direction is 'vx', while velocity in the y-direction is 'vy'.
 
+The graphs are created below using ==ekf-visualization.ipynb== provided by [Mercedes Sensor Fusion Utilities](https://github.com/udacity/CarND-Mercedes-SF-Utilities)
+This is done by logging the data in an output.txt file when running the prject with simulator.
+Format of the logged data is prsenet in following sequence: ['px_est','py_est','vx_est','vy_est','px_meas','py_meas','px_gt','py_gt','vx_gt','vy_gt'].
+This is then observed using ==ekf-visualization.ipynb==.
+
+### 1. Laser-Radar Combined 
+Set following compiler switches to:
+ONLY_LASER 0
+ONLY_RADAR 0
+
+####1. Dataset 1
 ![Laser-Radar-Output-Dataset1](https://github.com/vikasmalik22/EKF/blob/master/results/ekf_output1.png)
 
+[ekf_output1.txt](https://github.com/vikasmalik22/EKF/blob/master/results/ekf_output1.txt)
+
+#### 2. Dataset 2
 ![Laser-Radar-Output-Dataset2](https://github.com/vikasmalik22/EKF/blob/master/results/ekf_output2.png)
+
+[ekf_output2.txt](https://github.com/vikasmalik22/EKF/blob/master/results/ekf_output1.txt)
+
+### 2. Laser Only
+
+Set following compiler switches to:
+ONLY_LASER 1
+ONLY_RADAR 0
+
+![Laser-Output-Dataset1](https://github.com/vikasmalik22/EKF/blob/master/results/ekf_laser_output1.png)
+
+[ekf_laser_output1.txt](https://github.com/vikasmalik22/EKF/blob/master/results/ekf_laser_output1.txt)
+
+#### 2. Dataset 2
+![Laser-Output-Dataset2](https://github.com/vikasmalik22/EKF/blob/master/results/ekf_laser_output2.png)
+
+[ekf_laser_output2.txt](https://github.com/vikasmalik22/EKF/blob/master/results/ekf_laser_output2.txt)
+
+### 3. Radar Only
+
+Set following compiler switches to:
+ONLY_LASER 0
+ONLY_RADAR 1
+
+![Radar-Output-Dataset1](https://github.com/vikasmalik22/EKF/blob/master/results/kf_radar_output1.png)
+
+[ekf_radar_output1.txt](https://github.com/vikasmalik22/EKF/blob/master/results/ekf_radar_output1.txt)
+
+#### 2. Dataset 2
+![Radar-Output-Dataset2](https://github.com/vikasmalik22/EKF/blob/master/results/ekf_radar_output2.png)
+
+[ekf_radar_output2.txt](https://github.com/vikasmalik22/EKF/blob/master/results/ekf_radar_output2.txt)
