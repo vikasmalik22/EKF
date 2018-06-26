@@ -38,17 +38,22 @@ Threshold RMSE <= [.11, .11, 0.52, 0.52].
 Set following compiler switches to:
 
 ONLY_LASER 0
+_ _ _
+
 ONLY_RADAR 0
 
 #### 1. Dataset 1
 ![Laser-Radar-Output-Dataset1](https://github.com/vikasmalik22/EKF/blob/master/results/ekf_output1.png)
 
+Accuracy - RMSE [0.0974, 0.0855, 0.4517, 0.4404]
 ![Accuracy - RMSE](https://github.com/vikasmalik22/EKF/blob/master/results/rmse_output1.png)
 
 [ekf_output1.txt](https://github.com/vikasmalik22/EKF/blob/master/results/ekf_output1.txt)
 
 #### 2. Dataset 2
 ![Laser-Radar-Output-Dataset2](https://github.com/vikasmalik22/EKF/blob/master/results/ekf_output2.png)
+
+Accuracy - RMSE [0.0726, 0.0967, 0.4469, 0.4944]
 
 ![Accuracy - RMSE](https://github.com/vikasmalik22/EKF/blob/master/results/rmse_output2.png)
 
@@ -59,18 +64,20 @@ ONLY_RADAR 0
 Set following compiler switches to:
 
 ONLY_LASER 1
+_ _ _
+
 ONLY_RADAR 0
 
 ![Laser-Output-Dataset1](https://github.com/vikasmalik22/EKF/blob/master/results/ekf_laser_output1.png)
 
-![Accuracy - RMSE](https://github.com/vikasmalik22/EKF/blob/master/results/rmse_laser_output1.png)
+Accuracy - RMSE [0.1222, 0.0984, 0.5825, 0.4567]
 
 [ekf_laser_output1.txt](https://github.com/vikasmalik22/EKF/blob/master/results/ekf_laser_output1.txt)
 
 #### 2. Dataset 2
 ![Laser-Output-Dataset2](https://github.com/vikasmalik22/EKF/blob/master/results/ekf_laser_output2.png)
 
-![Accuracy - RMSE](https://github.com/vikasmalik22/EKF/blob/master/results/rmse_laser_output2.png)
+Accuracy - RMSE [0.0961458, 0.100295, 0.541759, 0.464002]
 
 [ekf_laser_output2.txt](https://github.com/vikasmalik22/EKF/blob/master/results/ekf_laser_output2.txt)
 
@@ -79,18 +86,23 @@ ONLY_RADAR 0
 Set following compiler switches to:
 
 ONLY_LASER 0
+_ _ _
+
 ONLY_RADAR 1
 
 #### 1. Dataset 1
-![Radar-Output-Dataset1](https://github.com/vikasmalik22/EKF/blob/master/results/kf_radar_output1.png)
+![Radar-Output-Dataset1](https://github.com/vikasmalik22/EKF/blob/master/results/ekf_radar_output1.png)
 
-![Accuracy - RMSE](https://github.com/vikasmalik22/EKF/blob/master/results/rmse_radar_output1.png)
+Accuracy - RMSE [10.9958, 7.7916, 10.109, 7.8036]
 
 [ekf_radar_output1.txt](https://github.com/vikasmalik22/EKF/blob/master/results/ekf_radar_output1.txt)
 
 #### 2. Dataset 2
 ![Radar-Output-Dataset2](https://github.com/vikasmalik22/EKF/blob/master/results/ekf_radar_output2.png)
 
-![Accuracy - RMSE](https://github.com/vikasmalik22/EKF/blob/master/results/rmse_radar_output2.png)
+Accuracy - RMSE [0.224622, 0.295356 0.566935, 0.724152]
 
 [ekf_radar_output2.txt](https://github.com/vikasmalik22/EKF/blob/master/results/ekf_radar_output2.txt)
+
+## Observation
+From the above results (RMSE values), Laser data seems to provide more accurate readings than the radar. Combining both of them strengthens the EKF algorithm to predict the position more precisely.
